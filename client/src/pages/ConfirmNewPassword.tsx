@@ -8,7 +8,7 @@ export default function ConfirmNewPassword({ textInput }: NewPasswordProps) {
          <h1 className="mb-4">Create new password</h1>
          <input
             className={textInput}
-            type="text"
+            type="password"
             placeholder="New Password"
          />
          <input

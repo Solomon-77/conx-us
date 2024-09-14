@@ -5,6 +5,7 @@ import Signup from "./pages/SignupPage";
 import VerifyEmail from "./pages/VerifyEmail";
 import ResetPassword from "./pages/ResetPassword";
 import ConfirmNewPassword from "./pages/ConfirmNewPassword";
+import Dashboard from "./pages/Dashboard";
 
 export default function App() {
 
@@ -22,6 +23,7 @@ export default function App() {
                   <Route path="reset-password" element={<ResetPassword />} />
                   <Route path="confirm-new-password" element={<ConfirmNewPassword textInput={textInput} />} />
                </Route>
+               <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
          </BrowserRouter>
       </div>
