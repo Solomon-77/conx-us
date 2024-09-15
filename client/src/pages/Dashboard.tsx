@@ -2,17 +2,19 @@ import { CiSearch } from "react-icons/ci";
 import SideNav from "../components/SideNav";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { LuMessageSquare } from "react-icons/lu";
+import { BiSolidSend } from "react-icons/bi";
+import CodeSyntax from "../components/CodeSyntax";
 
 export default function Dashboard() {
    return (
       <div>
-         <nav className="w-full border-b border-gray-300">
-            <div className="h-[60px] max-w-[1366px] mx-auto grid grid-cols-[250px_1fr_300px] items-center px-4 gap-4">
+         <nav className="w-full border-b border-gray-200">
+            <div className="h-[60px] max-w-[1366px] mx-auto grid grid-cols-[250px_1fr_300px] items-center px-6 gap-6">
                <div className="text-xl font-bold">&lt;ConXus /&gt;</div>
                <div className="relative flex items-center">
                   <CiSearch className="absolute ml-3 text-gray-400" />
                   <input
-                     className="py-2 pl-9 rounded-md outline-none focus:ring-1 focus:ring-gray-600 border border-gray-300 text-sm w-[250px]"
+                     className="py-2 pl-9 rounded-md outline-none focus:ring-1 focus:ring-gray-600 border border-gray-200 text-sm w-[250px]"
                      placeholder="Search"
                      type="text"
                   />
@@ -25,16 +27,38 @@ export default function Dashboard() {
             </div>
          </nav>
          <main className="">
-            <div className="h-[calc(100vh-61px)] max-w-[1366px] mx-auto grid grid-cols-[250px_1fr_300px] gap-4 px-4">
+            <div className="h-[calc(100vh-61px)] max-w-[1366px] mx-auto grid grid-cols-[250px_1fr_300px] px-6">
                <SideNav />
-               <div className="pt-4">
-                  <div className="bg-white border border-gray-300 shadow-md rounded-lg p-4">
+               <div className="p-6">
+                  <div className="bg-white border border-gray-200 shadow-md rounded-lg">
                      <textarea
-                        className="w-full p-4 border border-gray-300 rounded-lg"
-                        placeholder="What's on your mind?"
+                        className="w-full p-4 rounded-t-lg outline-none"
+                        placeholder="New Post"
                      />
-                     <div>
-                        <button className="bg-gray-800 mt-2 text-white text-sm font-semibold py-2 px-4 rounded-md">Post</button>
+                     <div className="bg-gray-200 rounded-b-lg flex justify-end">
+                        <BiSolidSend className="text-xl mx-2 my-2" />
+                     </div>
+                  </div>
+                  <div className="flex py-6 space-x-4 border-b border-gray-200">
+                     <div>Following</div>
+                     <div>Guild</div>
+                     <div>Community</div>
+                  </div>
+                  <div className="p-4 rounded-lg border border-gray-200 my-6">
+                     <div className="flex justify-between items-center">
+                        <div className="flex items-center">
+                           <div className="w-10 h-10 bg-black rounded-full"></div>
+                           <div className="ml-2">
+                              <h1 className="font-bold">John</h1>
+                              <p className="text-sm font-medium text-gray-500">2 hours ago</p>
+                           </div>
+                        </div>
+                        <button>. . .</button>
+                     </div>
+                     <div className="mt-6">
+                        <h1 className="mb-4">Typescript useful advanced types</h1>
+                        <p>As the title says, here are all the useful types that I'm using every day or create new types on top of them. I thought it might be handy for some people so I just share here and this will be updated moving forward:</p>
+                        <CodeSyntax />
                      </div>
                   </div>
                </div>
