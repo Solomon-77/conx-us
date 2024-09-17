@@ -9,7 +9,7 @@ export default function Dashboard() {
    return (
       <div>
          <nav className="w-full border-b border-gray-200">
-            <div className="h-[60px] max-w-[1366px] mx-auto grid grid-cols-[250px_1fr_300px] items-center px-6 gap-6">
+            <div className="h-[60px] max-w-[1270px] mx-auto grid grid-cols-[250px_1fr_300px] items-center px-6 gap-6">
                <div className="text-xl font-bold">&lt;ConXus /&gt;</div>
                <div className="relative flex items-center">
                   <CiSearch className="absolute ml-3 text-gray-400" />
@@ -27,9 +27,9 @@ export default function Dashboard() {
             </div>
          </nav>
          <main className="">
-            <div className="h-[calc(100vh-61px)] max-w-[1366px] mx-auto grid grid-cols-[250px_1fr_300px] px-6">
+            <div className="h-[calc(100vh-61px)] max-w-[1270px] mx-auto grid grid-cols-[250px_1fr_300px] px-6">
                <SideNav />
-               <div className="p-6">
+               <div className="p-6 min-w-0">
                   <div className="bg-white border border-gray-200 shadow-md rounded-lg">
                      <textarea
                         className="w-full p-4 rounded-t-lg outline-none"
@@ -44,7 +44,7 @@ export default function Dashboard() {
                      <div>Guild</div>
                      <div>Community</div>
                   </div>
-                  <div className="p-4 rounded-lg border border-gray-200 my-6">
+                  <div className="p-4 rounded-lg border max-w-full border-gray-200 my-6">
                      <div className="flex justify-between items-center">
                         <div className="flex items-center">
                            <div className="w-10 h-10 bg-black rounded-full"></div>
