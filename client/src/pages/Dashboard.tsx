@@ -1,7 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import SideNav from "../components/SideNav";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { LuMessageSquare } from "react-icons/lu";
 import { BiSolidSend } from "react-icons/bi";
 import CodeSyntax from "../components/CodeSyntax";
 import Messages from "../components/Messages";
@@ -22,7 +21,6 @@ export default function Dashboard() {
                   />
                </div>
                <ul className="flex items-center justify-end space-x-5">
-                  <LuMessageSquare className="text-2xl" />
                   <IoMdNotificationsOutline className="text-2xl" />
                   <li>Profile</li>
                </ul>
@@ -61,6 +59,13 @@ export default function Dashboard() {
                         <h1 className="mb-4">Typescript useful advanced types</h1>
                         <p>As the title says, here are all the useful types that I'm using every day or create new types on top of them. I thought it might be handy for some people so I just share here and this will be updated moving forward:</p>
                         <CodeSyntax />
+                     </div>
+                     <div className="flex justify-between items-center mt-4">
+                        <div className="flex space-x-4">
+                           <h1>Reactions</h1>
+                           <h1>Comments</h1>
+                        </div>
+                        <h1>bookmark</h1>
                      </div>
                   </div>
                </div>
