@@ -4,12 +4,13 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { BiSolidSend } from "react-icons/bi";
 import CodeSyntax from "../components/CodeSyntax";
 import Messages from "../components/Messages";
+import { IoIosMore } from "react-icons/io";
 
 export default function Dashboard() {
    return (
       <>
          <Messages />
-         <nav className="w-full border-b border-gray-200">
+         <nav className="fixed bg-white w-full border-b border-gray-200">
             <div className="h-[60px] max-w-[1270px] mx-auto grid grid-cols-[250px_1fr_300px] items-center px-6 gap-8">
                <div className="text-xl font-bold">&lt;ConXus /&gt;</div>
                <div className="relative flex items-center">
@@ -26,7 +27,7 @@ export default function Dashboard() {
                </ul>
             </div>
          </nav>
-         <main className="">
+         <main className="pt-[61px]">
             <div className="h-[calc(100vh-61px)] max-w-[1270px] mx-auto grid grid-cols-[250px_1fr_300px] p-6 gap-8">
                <SideNav />
                <div className="min-w-0 mb-6">
@@ -40,7 +41,7 @@ export default function Dashboard() {
                      </div>
                   </div>
                   <div className="flex py-[22px] space-x-4">
-                     <div>Following</div>
+                     <div>Feed</div>
                      <div>Guild</div>
                      <div>Community</div>
                   </div>
@@ -53,7 +54,7 @@ export default function Dashboard() {
                               <p className="text-sm font-medium text-gray-500">2 hours ago</p>
                            </div>
                         </div>
-                        <button>. . .</button>
+                        <IoIosMore className="text-xl cursor-pointer" />
                      </div>
                      <div className="mt-6">
                         <h1 className="mb-4">Typescript useful advanced types</h1>
@@ -70,9 +71,28 @@ export default function Dashboard() {
                   </div>
                </div>
                <div className="">
-                  <div>
-                     <h1 className="text-lg font-bold">Trending</h1>
-                  </div>
+                  <h1 className="text-lg font-bold mb-4">Trending</h1>
+                  <ul className="flex justify-between items-center">
+                     <div>
+                        <li className="font-bold">#iShowSpeed</li>
+                        <li className="text-sm text-gray-500 font-medium mb-2">60.5k posts</li>
+                     </div>
+                     <IoIosMore className="text-md" />
+                  </ul>
+                  <ul className="flex justify-between items-center">
+                     <div>
+                        <li className="font-bold">#Iran</li>
+                        <li className="text-sm text-gray-500 font-medium mb-2">40.5k posts</li>
+                     </div>
+                     <IoIosMore className="text-md" />
+                  </ul>
+                  <ul className="flex justify-between items-center">
+                     <div>
+                        <li className="font-bold">#Avalanche</li>
+                        <li className="text-sm text-gray-500 font-medium mb-2">32.4k posts</li>
+                     </div>
+                     <IoIosMore className="text-md" />
+                  </ul>
                </div>
             </div>
          </main>
