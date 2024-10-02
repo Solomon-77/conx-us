@@ -1,19 +1,36 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, Document } from 'mongoose';
 
-const verificationCodeSchema = new Schema({
-   userId: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-      required: true
+interface IVerificationCode extends Document {
+   email: string;
+   code: string;
+   username: string;
+   hashedPassword: string;
+   createdAt: Date;
+}
+
+const verificationCodeSchema = new Schema<IVerificationCode>({
+   email: {
+      type: String,
+      required: true,
+      unique: true,
    },
    code: {
       type: String,
-      required: true
+      required: true,
    },
-   expiresAt: {
+   username: {
+      type: String,
+      required: true,
+   },
+   hashedPassword: {
+      type: String,
+      required: true,
+   },
+   createdAt: {
       type: Date,
-      required: true
-   }
+      default: Date.now,
+      expires: 300, // 5 minutes expiration
+   },
 }, { versionKey: false });
 
-export const VerificationCode = model('VerificationCode', verificationCodeSchema);
+export const VerificationCode = model<IVerificationCode>('VerificationCode', verificationCodeSchema);
