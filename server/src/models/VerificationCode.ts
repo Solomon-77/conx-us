@@ -1,14 +1,6 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
-interface IVerificationCode extends Document {
-   email: string;
-   code: string;
-   username: string;
-   hashedPassword: string;
-   createdAt: Date;
-}
-
-const verificationCodeSchema = new Schema<IVerificationCode>({
+const verificationCodeSchema = new Schema({
    email: {
       type: String,
       required: true,
@@ -33,4 +25,4 @@ const verificationCodeSchema = new Schema<IVerificationCode>({
    },
 }, { versionKey: false });
 
-export const VerificationCode = model<IVerificationCode>('VerificationCode', verificationCodeSchema);
+export const VerificationCode = model('VerificationCode', verificationCodeSchema);
