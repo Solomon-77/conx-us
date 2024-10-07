@@ -10,5 +10,7 @@ router.post("/verify", verify)
 router.post("/login", login)
 router.get('/auth/google',);
 router.get('/auth/google/callback',);
+router.get('/auth/github',);
+router.get('/auth/github/callback',);
 
 export default router;
