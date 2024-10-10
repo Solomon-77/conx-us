@@ -6,7 +6,7 @@ import { User } from '../models/User';
 const client = new OAuth2Client(
    process.env.GOOGLE_CLIENT_ID,
    process.env.GOOGLE_CLIENT_SECRET,
-   'http://localhost:3000/auth/google/callback'  // Update this to your actual callback URL
+   process.env.GOOGLE_CALLBACK_URL
 );
 
 export const googleOauth = {
