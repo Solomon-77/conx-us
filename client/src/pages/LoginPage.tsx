@@ -1,5 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 interface LoginProps {
    textInput: string;
@@ -39,7 +40,7 @@ export default function Login({ textInput }: LoginProps) {
             </div>
          </div>
          <div className="flex gap-2 justify-center text-sm pt-8">
-            <p className="font-medium hover:underline text-gray-800 hover:text-black cursor-pointer">Sign Up</p>
+            <Link to={"/signup"} className="font-medium hover:underline text-gray-800 hover:text-black cursor-pointer">Sign Up</Link>
             <p className=" text-gray-600">or</p>
             <p className="font-medium hover:underline text-gray-800 hover:text-black cursor-pointer">Reset Password</p>
          </div>
