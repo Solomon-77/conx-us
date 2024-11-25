@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 interface SignupProps {
    textInput: string
 }
@@ -28,7 +30,7 @@ export default function Signup({ textInput }: SignupProps) {
          />
          <button className="bg-gray-700 hover:bg-gray-800 text-white font-medium py-3 rounded-md w-full">Sign up</button>
          <div className="pt-8 text-sm text-center ">
-            <p className="font-medium text-gray-800 hover:text-black cursor-pointer hover:underline">Already have an account? Login</p>
+            <Link to="/login" className="font-medium text-gray-800 hover:text-black cursor-pointer hover:underline">Already have an account? Login</Link>
          </div>
       </div>
    )

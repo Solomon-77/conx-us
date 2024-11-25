@@ -42,7 +42,7 @@ export default function Login({ textInput }: LoginProps) {
          <div className="flex gap-2 justify-center text-sm pt-8">
             <Link to="/signup" className="font-medium hover:underline text-gray-800 hover:text-black cursor-pointer">Sign Up</Link>
             <p className=" text-gray-600">or</p>
-            <Link to="/reset-password" className="font-medium hover:underline text-gray-800 hover:text-black cursor-pointer">Reset Password</Link>
+            <Link to="/enter-email" className="font-medium hover:underline text-gray-800 hover:text-black cursor-pointer">Reset Password</Link>
          </div>
       </div>
    )
