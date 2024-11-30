@@ -10,26 +10,28 @@ export default function Dashboard() {
    return (
       <>
          <Messages />
-         <nav className="fixed bg-white w-full border-b border-gray-200">
-            <div className="h-[60px] max-w-[1270px] mx-auto grid grid-cols-[250px_1fr_300px] items-center px-6 gap-8">
+         <nav className="fixed bg-white w-full border-b border-gray-200 z-10">
+            <div className="h-[60px] max-w-[1270px] mx-auto grid grid-cols-2 md:grid-cols-[250px_1fr_300px] items-center px-4 md:px-6 gap-4 md:gap-8">
                <div className="text-xl font-bold">&lt;ConXus /&gt;</div>
-               <div className="relative flex items-center">
+               <div className="relative flex items-center md:block">
                   <CiSearch className="absolute ml-3 text-gray-400" />
                   <input
-                     className="py-2 pl-9 rounded-md outline-none focus:ring-1 focus:ring-gray-600 border border-gray-200 text-sm w-[250px]"
+                     className="py-2 pl-9 rounded-md outline-none focus:ring-1 focus:ring-gray-600 border border-gray-200 text-sm w-full md:w-[250px]"
                      placeholder="Search"
                      type="text"
                   />
                </div>
-               <ul className="flex items-center justify-end space-x-5">
+               <ul className="hidden md:flex items-center justify-end space-x-5">
                   <IoMdNotificationsOutline className="text-2xl" />
                   <li>Profile</li>
                </ul>
             </div>
          </nav>
          <main className="pt-[61px]">
-            <div className="h-[calc(100vh-61px)] max-w-[1270px] mx-auto grid grid-cols-[250px_1fr_300px] p-6 gap-8">
-               <SideNav />
+            <div className="h-[calc(100vh-61px)] max-w-[1270px] mx-auto grid grid-cols-1 md:grid-cols-[250px_1fr] lg:grid-cols-[250px_1fr_300px] p-4 md:p-6 gap-6 md:gap-8">
+               <div className="hidden md:block">
+                  <SideNav />
+               </div>
                <div className="min-w-0 mb-6">
                   <div className="bg-white border border-gray-200 shadow-md rounded-lg">
                      <textarea
@@ -40,7 +42,7 @@ export default function Dashboard() {
                         <BiSolidSend className="text-xl mx-2 my-2" />
                      </div>
                   </div>
-                  <div className="flex py-[22px] space-x-4">
+                  <div className="flex py-[22px] space-x-4 overflow-x-auto">
                      <div>Feed</div>
                      <div>Guild</div>
                      <div>Community</div>
@@ -58,7 +60,7 @@ export default function Dashboard() {
                      </div>
                      <div className="mt-6">
                         <h1 className="mb-4">Typescript useful advanced types</h1>
-                        <p>As the title says, here are all the useful types that I'm using every day or create new types on top of them. I thought it might be handy for some people so I just share here and this will be updated moving forward:</p>
+                        <p className="text-sm md:text-base">As the title says, here are all the useful types that I'm using every day or create new types on top of them. I thought it might be handy for some people so I just share here and this will be updated moving forward:</p>
                         <CodeSyntax />
                      </div>
                      <div className="flex justify-between items-center mt-4">
@@ -68,9 +70,9 @@ export default function Dashboard() {
                         </div>
                         <h1>bookmark</h1>
                      </div>
-                  </div>z
+                  </div>
                </div>
-               <div className="">
+               <div className="hidden lg:block">
                   <h1 className="text-lg font-bold mb-4">Trending</h1>
                   <ul className="flex justify-between items-center">
                      <div>
