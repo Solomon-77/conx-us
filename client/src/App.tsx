@@ -3,7 +3,6 @@ import Login from "./pages/LoginPage";
 import Landing from "./pages/LandingPage";
 import Signup from "./pages/SignupPage";
 import VerifyEmail from "./pages/VerifyEmail";
-import ResetPassword from "./pages/ResetPassword";
 import ConfirmNewPassword from "./pages/ConfirmNewPassword";
 import Dashboard from "./pages/Dashboard";
 import EmailResetPassword from "./pages/EmailResetPassword";
@@ -22,7 +21,6 @@ export default function App() {
                   <Route path="signup" element={<Signup textInput={textInput} />} />
                   <Route path="verify" element={<VerifyEmail />} />
                   <Route path="enter-email" element={<EmailResetPassword textInput={textInput} />} />
-                  <Route path="reset-password" element={<ResetPassword />} />
                   <Route path="confirm-new-password" element={<ConfirmNewPassword textInput={textInput} />} />
                </Route>
                <Route path="/dashboard" element={<Dashboard />} />
